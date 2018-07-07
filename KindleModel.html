@@ -1,0 +1,143 @@
+<!--正面模板-->
+<div style = "background: #ffffff;color: #000000;border:20px solid #B3E5FC; border-left:none;border-right:none;">
+	<div style = "padding-top: 40px;padding-left: 15px;padding-right: 15px;padding-bottom: 5px;font-size: 40px;text-align:center;">{{单词}}</div>
+	<div style = "padding-top: 40px;padding-left: 15px;padding-right: 15px;padding-bottom: 5px;text-align: center;font-size: 15px;">{{音标}}</div>  
+	<div style = "padding-top: 5px;padding-left: 15px;padding-right: 15px;padding-bottom: 5px;text-align: center;font-size: 20px;">{{柯林斯词频}}</div>    	
+    <div style = "padding-top: 40px;padding-left: 40px;padding-right: 40px;padding-bottom:40px;text-align: center;line-height: 1.5em;">{{kindle例句}}</div>   
+</div>
+<!--反面模板-->
+<div style = "background: #ffffff;border:2px solid #B3E5FC; border-left:none;border-right:none;border-top:none;margin: 0px;">
+    <div style = "padding-top: 15px;padding-left: 15px;padding-right: 15px;padding-bottom: 5px;text-align:center;font-size: 25px;">{{发音}}{{单词}}</div><div style = "color: #03A9F4;text-align:center;">{{音标}}</div>
+    <div style = "padding-top: 5px;padding-left: 15px;padding-right: 15px;padding-bottom: 5px;text-align:center;">{{coca词频}}</div>
+    <div style = "padding-top: 5px;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;text-align:center;">{{图片解释}}</div>
+</div>
+<div class = "explaincard" id = "vocabulary">
+    <div class = "explaincard_title"><span class = "explaincard_title_left">&nbsp&nbspVocabulary.com</span> <span style = "color: #03A9F4;float:right;" onclick="showdiv()">more</span></div>
+    <div class = "explaincard_content">
+        <div style = "margin: 0px;" id = "checkvocabulary">{{vocabulary简介}}</div>
+        <div style = " padding-top: 10px;display: none;" id="hide">
+            <div style = "border:1px dotted #4CAF50;border-radius: 15px;padding: 10px;" >{{vocabulary详细解释}}</div>
+        </div>
+    </div>
+</div>
+<div class = "explaincard" id = "oxfordthesaurus">
+    <div class = "explaincard_title"><span class = "explaincard_title_left">&nbsp&nbspOxford Thesaurus</span></div>
+    <div class = "explaincard_content" id = "checkoxfordthesaurus">{{牛津同义词词典}}</div>
+</div>
+<div class = "explaincard" id = "oxfordcollection">
+    <div class = "explaincard_title"><span class = "explaincard_title_left">&nbsp&nbspOxford Collocation</span></div>
+    <div class = "explaincard_content" id = "checkoxfordcollection">{{牛津搭配词典}}</div>
+</div>
+<div class = "explaincard" id = "vocabularysample">
+    <div class = "explaincard_title"><span class = "explaincard_title_left">&nbsp&nbspUsage Example</span></div>
+    <div class = "explaincard_content" id = "checkvocabularysample">{{vocabulary例句}}</div>
+</div>
+<!--CSS样式-->
+</style>
+<style>
+    .card {
+        font-size: 15px;
+        text-align: left;
+        color: #000000;
+        background-color: #B3E5FC;
+        margin: 0px;
+		font-family:"Segoe UI", Arial, "Microsoft Yahei", sans-serif;
+    }
+    .explaincard {
+        background: #ffffff;
+        border:2px solid #B3E5FC; 
+        border-left:none;
+        border-right:none;
+        margin: 0px;
+    }
+    .explaincard_title {
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+    }
+    .explaincard_title_left {
+        color: #000000;
+        font-weight: bold;
+        border:5px solid #4CAF50; 
+        border-top:none;
+        border-bottom:none;
+        border-right: none;
+        float:left;
+    }
+    .explaincard_content {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        line-height: 1.5em;
+        color: #000000;
+        clear:both;
+    }
+	.hw {display:none;}
+	.pt {display:none;}
+    .label {
+        padding:2px;
+        text-align: center;
+        border-radius: 3px;
+        margin: 3px;
+        text-transform:capitalize;
+    }    
+    .label-primary {
+        color: #337ab7;
+    }
+    .label-success {
+        color: #4CAF50;
+    }
+    .label-info {
+        color: #03A9F4;
+    }
+    .label-warning {
+        color: #f0ad4e;
+    }
+    .rank:before {
+        content: " rank ";
+        font-weight: normal;
+        color:#03A9F4;
+    }
+
+    .rank:after {
+        content: " freq ";
+        font-weight: normal;
+        color:#03A9F4;
+    }
+    .table {
+        display: none;
+    }
+    .pos {
+        background: #4CAF50;
+        color:#ffffff;
+        border-radius: 2px;
+        padding: 1.5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 0.9em;
+    }
+    .pos:after {
+        content: ".";
+    }
+</style>
+<script>
+    function showdiv(){
+        if(showdiv_display = document.getElementById('hide').style.display=='none')
+        {document.getElementById('hide').style.display='block';}
+        else
+        {document.getElementById('hide').style.display='none';}
+    }
+    window.onload=function display(){
+        if (document.getElementById("checkvocabulary").innerHTML == '') 
+        {document.getElementById("vocabulary").style.display="none";}
+        if (document.getElementById("checkvocabularysample").innerHTML == '') 
+        {document.getElementById("vocabularysample").style.display="none";}
+        if (document.getElementById("checkoxfordcollection").innerHTML == '') 
+        {document.getElementById("oxfordcollection").style.display="none";}
+        if (document.getElementById("checkoxfordthesaurus").innerHTML == '') 
+        {document.getElementById("oxfordthesaurus").style.display="none";}
+    }
+</script>
+<style>
