@@ -8,3 +8,6 @@
 
 
 模板源文件  KindleModel.html
+
+
+多线程版WordQuery   https://github.com/sth2018/FastWordQuery
