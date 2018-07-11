@@ -74,35 +74,107 @@
         color: #000000;
         clear:both;
     }
-	.hw {display:none;}
-	.pt {display:none;}
-    .label {
-        padding:2px;
+    .hw {
+        display:none;
+        }
+    .pt {
+        display:none;
+        }
+    .light {
+        color:#4CAF50;
+        font-style: italic;
+        }
+    .samplefrom {
+        color:#32516D; 
+        margin-bottom:15px;
+        margin-top:3px; 
+        font-style: italic;
+        }
+    .word-frequency {
+        margin-bottom:18px;
+        }
+    .coca2 {
+        margin-top:15px;
+        }
+    .coca_desc {
+        margin-top:3px;
+        }
+    .pos_v {
+        display: inline;
+        vertical-align:middle;
+        padding:1px 2px 1px 2px;
         text-align: center;
-        border-radius: 3px;
+        border-radius: 5px;
+        margin: 0px 3px 0px 0px;
+        font-size:12px;
+        color: #ffffff;
+        background: #4CAF50;
+	}
+    .pos_n {
+        display: inline;
+        vertical-align:middle;
+        padding:1px 2px 1px 2px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0px 3px 0px 0px;
+        font-size:12px;
+        color: #ffffff;
+        background: #03A9F4;
+	}
+    .pos_j {
+        display: inline;
+        vertical-align:middle;
+        padding:1px 2px 1px 2px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0px 3px 0px 0px;
+        font-size:12px;
+        color: #ffffff;
+        background: #D32F2F;
+	}
+    .pos_r {
+        display: inline;
+        vertical-align:middle;
+        padding:1px 2px 1px 2px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 0px 3px 0px 0px;
+        font-size:12px;
+        color: #ffffff;
+        background: #32516D;
+	}
+    .label {
+        padding:1px 2px 1px 2px;
+        text-align: center;
+        border-radius: 5px;
         margin: 3px;
         text-transform:capitalize;
+        font-size:12px;
+        border:1px solid;
     }    
     .label-primary {
-        color: #337ab7;
+        color: #D32F2F;
+        border-color: #D32F2F;
     }
     .label-success {
         color: #4CAF50;
+        border-color: #4CAF50;
     }
     .label-info {
         color: #03A9F4;
+        border-color: #03A9F4;
     }
     .label-warning {
         color: #f0ad4e;
+        border-color: #f0ad4e;
     }
     .rank:before {
-        content: " rank ";
+        content: " RANK ";
         font-weight: normal;
         color:#03A9F4;
     }
-
     .rank:after {
-        content: " freq ";
+        content: " FREQ ";
         font-weight: normal;
         color:#03A9F4;
     }
@@ -121,6 +193,14 @@
     .pos:after {
         content: ".";
     }
+    .rank {
+        display: inline;
+        vertical-align:middle;
+        }
+    .total {
+        display: inline;
+        vertical-align:middle;
+        }
 </style>
 <script>
     function showdiv(){
