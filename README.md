@@ -19,3 +19,4 @@
 7/11/2018   更新CSS样式表KindleModel.html
 
 11/21/2018   修改KindleModel.html，优化了一些问题，新的版本文件为NewKindleModel.html
+             该版本删除了牛津同义词词典，修改了部分css样式
