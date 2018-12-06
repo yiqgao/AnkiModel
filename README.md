@@ -13,6 +13,9 @@
 多线程版WordQuery   https://github.com/sth2018/FastWordQuery
 
 
+Economist 10000词汇 [https://1drv.ms/u/s!Ao9Of0JgO6MUxVHLPWjKe0qwNQci](https://1drv.ms/u/s!Ao9Of0JgO6MUxVHLPWjKe0qwNQci)
+
+
 # 更新历史
 
 
